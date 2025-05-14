@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bartender for Your Party</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      padding: 2rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .cocktail-list {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #1c1c1c;
+      border-radius: 10px;
+    }
+
+    .cocktail-list h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #f0c040;
+    }
+
+    .cocktails {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .cocktail {
+      background: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 180px;
+      text-align: center;
+    }
+
+    .cocktail:hover {
+      background: #3a3a3a;
+    }
+
+    .form-section {
+      background: #181818;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 2rem auto;
+      border-radius: 10px;
+    }
+
+    .form-section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #40c4ff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #40c4ff;
+      color: #000;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00bcd4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #aaa;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hire a Bartender for Your Party</h1>
+    <p>Only ₹3000 — Creative cocktails and great vibes!</p>
+  </header>
+
+  <section class="cocktail-list">
+    <h2>Cocktails I Make</h2>
+    <div class="cocktails">
+      <div class="cocktail">Whisky Sour</div>
+      <div class="cocktail">Mojito</div>
+      <div class="cocktail">Picanta</div>
+      <div class="cocktail">Orange Caipiroska</div>
+      <div class="cocktail">Cucumber Basil Smash</div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>Book Now</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="tel" id="phone" placeholder="Your Phone Number" required />
+      <textarea id="message" rows="4" placeholder="Party details (date, time, location, guests)" required></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+    <p id="confirmation" style="text-align:center; margin-top:1rem;"></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Bartender Service
+  </footer>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("confirmation").textContent = "Thank you! Your booking request has been submitted.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
