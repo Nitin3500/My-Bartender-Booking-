@@ -1,81 +1,111 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bartender for Your Party</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Fresh Fruit Cocktails – Bartender Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
     }
 
     body {
-      background: #0f0f0f;
+      background: #0e0e0e;
       color: #fff;
       line-height: 1.6;
     }
 
     header {
-      background: #111;
-      padding: 2rem;
+      background: linear-gradient(90deg, #1f1f1f, #333);
+      padding: 2rem 1rem;
       text-align: center;
-      color: #fff;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      color: #f0c040;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .contact-info a {
+      color: #40c4ff;
+      text-decoration: none;
     }
 
     .cocktail-list {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 3rem auto;
-      padding: 2rem;
-      background: #1c1c1c;
-      border-radius: 10px;
+      padding: 0 1rem;
     }
 
     .cocktail-list h2 {
       text-align: center;
       margin-bottom: 1.5rem;
-      color: #f0c040;
+      font-size: 2rem;
+      color: #40c4ff;
+    }
+
+    .note {
+      text-align: center;
+      color: #bbb;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
 
     .cocktails {
       display: flex;
       flex-wrap: wrap;
+      gap: 1.5rem;
       justify-content: center;
-      gap: 1rem;
     }
 
     .cocktail {
-      background: #292929;
-      padding: 1rem;
-      border-radius: 8px;
-      width: 180px;
-      text-align: center;
+      background: #1c1c1c;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 250px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
     }
 
     .cocktail:hover {
-      background: #3a3a3a;
+      transform: translateY(-5px);
+    }
+
+    .cocktail img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .cocktail-name {
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #f0c040;
     }
 
     .form-section {
       background: #181818;
-      padding: 2rem;
-      max-width: 600px;
-      margin: 2rem auto;
-      border-radius: 10px;
+      padding: 2rem 1rem;
+      max-width: 700px;
+      margin: 3rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
     }
 
     .form-section h2 {
@@ -91,24 +121,38 @@
     }
 
     input, textarea {
-      padding: 0.75rem;
+      padding: 0.8rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 1rem;
+      background: #2a2a2a;
+      color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
     }
 
     button {
       background: #40c4ff;
       color: #000;
-      padding: 0.75rem;
+      padding: 0.9rem;
       font-size: 1.1rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background 0.3s;
     }
 
     button:hover {
       background: #00bcd4;
+    }
+
+    #confirmation {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #8bc34a;
     }
 
     footer {
@@ -123,17 +167,75 @@
 <body>
   <header>
     <h1>Hire a Bartender for Your Party</h1>
-    <p>Only ₹3000 — Creative cocktails and great vibes!</p>
+    <p>Only ₹3500 — Creative cocktails with fresh fruits, no syrups!</p>
+    <div class="contact-info">
+      📞 <strong>7827709059</strong> |
+      💬 <a href="https://wa.me/917827709059" target="_blank">WhatsApp Me</a>
+    </div>
   </header>
 
   <section class="cocktail-list">
-    <h2>Cocktails I Make</h2>
+    <h2>Signature Cocktails</h2>
+    <p class="note">All cocktails are handcrafted with fresh fruits only — no synthetic syrups!</p>
     <div class="cocktails">
-      <div class="cocktail">Whisky Sour</div>
-      <div class="cocktail">Mojito</div>
-      <div class="cocktail">Picanta</div>
-      <div class="cocktail">Orange Caipiroska</div>
-      <div class="cocktail">Cucumber Basil Smash</div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?whiskey,sour" alt="Whiskey Sour">
+        <div class="cocktail-name">Whiskey Sour</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?elderflower,spritz" alt="Elderflower Spritz">
+        <div class="cocktail-name">Elderflower Spritz</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?orange,fruit" alt="Orange Melano">
+        <div class="cocktail-name">Fresh Orange Melano</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?grapefruit,rosemary" alt="G&T">
+        <div class="cocktail-name">Grapefruit & Rosemary G&T</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?grapes,gin" alt="Black Grapes G&T">
+        <div class="cocktail-name">Black Grapes G&T Sour</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?cucumber,basil" alt="Cucumber Basil">
+        <div class="cocktail-name">Cucumber Basil Smash</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?jamun,fruit" alt="Jamun Sour">
+        <div class="cocktail-name">Fresh Jamun Sour</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?spicy,cocktail" alt="Picante">
+        <div class="cocktail-name">Picante</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?paloma,cocktail" alt="Paloma">
+        <div class="cocktail-name">Paloma</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cocktail-list">
+    <h2>Mocktails</h2>
+    <div class="cocktails">
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?orange,juice" alt="Fresh Orange Melano">
+        <div class="cocktail-name">Fresh Orange Melano</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?mojito,mint" alt="Classic Mojito">
+        <div class="cocktail-name">Classic Mojito</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?watermelon,basil" alt="Watermelon Cooler">
+        <div class="cocktail-name">Watermelon Basil Cooler</div>
+      </div>
+      <div class="cocktail">
+        <img src="https://source.unsplash.com/250x160/?lychee,fruit" alt="Lichi Tornado">
+        <div class="cocktail-name">Lichi Tornado</div>
+      </div>
     </div>
   </section>
 
@@ -143,14 +245,17 @@
       <input type="text" id="name" placeholder="Your Name" required />
       <input type="email" id="email" placeholder="Your Email" required />
       <input type="tel" id="phone" placeholder="Your Phone Number" required />
-      <textarea id="message" rows="4" placeholder="Party details (date, time, location, guests)" required></textarea>
+      <input type="text" id="address" placeholder="Party Address" required />
+      <input type="text" id="time" placeholder="Reporting Time (e.g. 6:30 PM)" required />
+      <input type="number" id="guests" placeholder="Number of Guests" required />
+      <textarea id="message" rows="4" placeholder="Any additional details?" required></textarea>
       <button type="submit">Submit Booking</button>
     </form>
-    <p id="confirmation" style="text-align:center; margin-top:1rem;"></p>
+    <p id="confirmation"></p>
   </section>
 
   <footer>
-    &copy; 2025 Your Bartender Service
+    &copy; 2025 Fresh Fruit Cocktail Bartender
   </footer>
 
   <script>
